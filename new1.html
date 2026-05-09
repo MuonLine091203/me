@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+    <head>
+        <title>tooltips ex(Hard)</title>
+        <style>
+            a {
+                color: inherit;            /* Giữ màu giống chữ bình thường */
+                text-decoration: none;     /* Bỏ gạch chân */
+                font-family: inherit;      /* Giữ font giống chữ bình thường */
+                font-weight: inherit;      /* Giữ độ đậm/nhạt của chữ */
+            }
+            body{
+                background-color: rgb(255, 231, 235);
+            }
+            p{
+                margin:0;
+            }
+            .video{
+                display:flex;
+                flex-direction:column;
+                row-gap:10px;
+                width:250px;
+                padding:10px;
+            }
+            .video:hover{
+                background-color:lightblue;
+                border-radius:10px;
+                transition: background-color 0.5s;
+            }
+            .hinh-anh{
+                position:relative;
+                line-height:0;
+            }
+            .hinh{
+                width:250px;
+                height:150px;
+                border-radius:10px;
+                object-fit: cover;
+                cursor:pointer;
+            }
+            .thoi-gian{
+                position:absolute;
+                right:10px;
+                bottom:10px;
+                background-color:black;
+                color:white;
+                font-size:12px;
+                padding:3px;
+                font-family:arial;
+                user-select: none;
+                cursor:pointer;
+                line-height:1.5;
+                transition:opacity 0.25s;
+            }
+            .video:hover .thoi-gian{
+                opacity:0;
+            }
+            .gioi-thieu{
+                display:flex;
+                position:relative;
+                flex-direction:row;
+                column-gap:10px;
+            }
+            .kenh{
+                width:40px;
+                border-radius:50%;
+                cursor:pointer;
+            }
+            .mo-ta{
+                display:flex;
+                flex-direction:column;
+                cursor:pointer;
+            }
+            .thamnil{
+                font-size:14px;
+                font-family:arial;
+            }
+            .name-channel{
+                font-size: 15px;
+                font-family:arial;
+                color:rgb(151, 151, 151);
+                margin-top:10px;
+            }
+            .popular{
+                font-size: 15px;
+                font-family:arial;
+                color:rgb(151, 151, 151);
+                margin-top:5px;
+            }
+            .tien-ich{
+                position:absolute;
+                margin:0;
+                margin-top:-10px;
+                padding:5px 5px 5px 5px;
+                right:0;
+            }
+            .ba-cham{
+                font-size:25px;
+                font-weight:bold;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="video">
+            <div class="hinh-anh">
+                <a href="new2.html" target="_blank">
+                    <img class="hinh" src="../DCM.jpg">
+                </a>
+                <div class="thoi-gian">1:30:00</div>
+            </div>
+            <div class="gioi-thieu">
+                <div>
+                    <img class="kenh" src="../h1.png">
+                </div>
+                <a href="new2.html" target="_blank">
+                    <div class="mo-ta">
+                        <p class="thamnil">Click Me</p>
+                        <p class="name-channel">Tin Master Chess</p>
+                        <p class="popular">1 views &middot; 1 hour ago</p>
+                    </div>
+                </a>
+                <div class="tien-ich"><p class="ba-cham">&#8942;</p></div>
+            </div>
+        </div>
+    </body>
+</html>
